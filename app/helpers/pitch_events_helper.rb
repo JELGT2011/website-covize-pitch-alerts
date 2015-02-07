@@ -1,0 +1,2 @@
+module PitchEventsHelper
+end

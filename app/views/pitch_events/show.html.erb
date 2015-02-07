@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @pitch_event.title %>
+</p>
+
+<p>
+  <strong>Host:</strong>
+  <%= @pitch_event.host %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @pitch_event.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @pitch_event.image %>
+</p>
+
+<%= link_to 'Edit', edit_pitch_event_path(@pitch_event) %> |
+<%= link_to 'Back', pitch_events_path %>
