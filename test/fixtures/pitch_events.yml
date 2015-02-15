@@ -1,13 +1,35 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  host: MyString
-  description: MyText
-  image: MyString
+  event_name: MyString
+  org_name: MyString
+  city: MyString
+  state: MyString
+  event_start: MyString
+  event_end: MyString
+  registration_deadline: MyString
+  detail_link: MyString
+  contact_name: MyString
+  contact_number: MyString
+  contact_email: MyString
+  location: MyString
+  woman: false
+  ethnic: MyString
+  industry: MyString
 
 two:
-  title: MyString
-  host: MyString
-  description: MyText
-  image: MyString
+  event_name: MyString
+  org_name: MyString
+  city: MyString
+  state: MyString
+  event_start: MyString
+  event_end: MyString
+  registration_deadline: MyString
+  detail_link: MyString
+  contact_name: MyString
+  contact_number: MyString
+  contact_email: MyString
+  location: MyString
+  woman: false
+  ethnic: MyString
+  industry: MyString

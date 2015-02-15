@@ -11,18 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150207224721) do
+ActiveRecord::Schema.define(version: 20150215194935) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "pitch_events", force: :cascade do |t|
-    t.string   "title"
-    t.string   "host"
-    t.text     "description"
-    t.string   "image"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "event_name"
+    t.string   "org_name"
+    t.string   "city"
+    t.string   "state"
+    t.string   "event_start"
+    t.string   "event_end"
+    t.string   "registration_deadline"
+    t.string   "detail_link"
+    t.string   "contact_name"
+    t.string   "contact_number"
+    t.string   "contact_email"
+    t.string   "location"
+    t.boolean  "woman"
+    t.string   "ethnic"
+    t.string   "industry"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
 end

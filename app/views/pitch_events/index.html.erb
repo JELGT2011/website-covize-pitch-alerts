@@ -5,10 +5,21 @@
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Host</th>
-      <th>Description</th>
-      <th>Image</th>
+      <th>Event name</th>
+      <th>Org name</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Event start</th>
+      <th>Event end</th>
+      <th>Registration deadline</th>
+      <th>Detail link</th>
+      <th>Contact name</th>
+      <th>Contact number</th>
+      <th>Contact email</th>
+      <th>Location</th>
+      <th>Woman</th>
+      <th>Ethnic</th>
+      <th>Industry</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +27,21 @@
   <tbody>
     <% @pitch_events.each do |pitch_event| %>
       <tr>
-        <td><%= pitch_event.title %></td>
-        <td><%= pitch_event.host %></td>
-        <td><%= pitch_event.description %></td>
-        <td><%= pitch_event.image %></td>
+        <td><%= pitch_event.event_name %></td>
+        <td><%= pitch_event.org_name %></td>
+        <td><%= pitch_event.city %></td>
+        <td><%= pitch_event.state %></td>
+        <td><%= pitch_event.event_start %></td>
+        <td><%= pitch_event.event_end %></td>
+        <td><%= pitch_event.registration_deadline %></td>
+        <td><%= pitch_event.detail_link %></td>
+        <td><%= pitch_event.contact_name %></td>
+        <td><%= pitch_event.contact_number %></td>
+        <td><%= pitch_event.contact_email %></td>
+        <td><%= pitch_event.location %></td>
+        <td><%= pitch_event.woman %></td>
+        <td><%= pitch_event.ethnic %></td>
+        <td><%= pitch_event.industry %></td>
         <td><%= link_to 'Show', pitch_event %></td>
         <td><%= link_to 'Edit', edit_pitch_event_path(pitch_event) %></td>
         <td><%= link_to 'Destroy', pitch_event, method: :delete, data: { confirm: 'Are you sure?' } %></td>

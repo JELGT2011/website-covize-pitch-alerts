@@ -1,23 +1,78 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @pitch_event.title %>
+  <strong>Event name:</strong>
+  <%= @pitch_event.event_name %>
 </p>
 
 <p>
-  <strong>Host:</strong>
-  <%= @pitch_event.host %>
+  <strong>Org name:</strong>
+  <%= @pitch_event.org_name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
-  <%= @pitch_event.description %>
+  <strong>City:</strong>
+  <%= @pitch_event.city %>
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <%= @pitch_event.image %>
+  <strong>State:</strong>
+  <%= @pitch_event.state %>
+</p>
+
+<p>
+  <strong>Event start:</strong>
+  <%= @pitch_event.event_start %>
+</p>
+
+<p>
+  <strong>Event end:</strong>
+  <%= @pitch_event.event_end %>
+</p>
+
+<p>
+  <strong>Registration deadline:</strong>
+  <%= @pitch_event.registration_deadline %>
+</p>
+
+<p>
+  <strong>Detail link:</strong>
+  <%= @pitch_event.detail_link %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @pitch_event.contact_name %>
+</p>
+
+<p>
+  <strong>Contact number:</strong>
+  <%= @pitch_event.contact_number %>
+</p>
+
+<p>
+  <strong>Contact email:</strong>
+  <%= @pitch_event.contact_email %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @pitch_event.location %>
+</p>
+
+<p>
+  <strong>Woman:</strong>
+  <%= @pitch_event.woman %>
+</p>
+
+<p>
+  <strong>Ethnic:</strong>
+  <%= @pitch_event.ethnic %>
+</p>
+
+<p>
+  <strong>Industry:</strong>
+  <%= @pitch_event.industry %>
 </p>
 
 <%= link_to 'Edit', edit_pitch_event_path(@pitch_event) %> |

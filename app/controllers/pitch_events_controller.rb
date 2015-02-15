@@ -69,6 +69,6 @@ class PitchEventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pitch_event_params
-      params.require(:pitch_event).permit(:title, :host, :description, :image)
+      params.require(:pitch_event).permit(:event_name, :org_name, :city, :state, :event_start, :event_end, :registration_deadline, :detail_link, :contact_name, :contact_number, :contact_email, :location, :woman, :ethnic, :industry)
     end
 end
