@@ -5,6 +5,10 @@ class PitchEventsController < ApplicationController
   # GET /pitch_events.json
   def index
     @pitch_events = PitchEvent.all
+    if params[:limit]
+      @pitch_events = @pitch_events[0, params[:limit].to_i]
+    end
+    
   end
 
   # GET /pitch_events/1

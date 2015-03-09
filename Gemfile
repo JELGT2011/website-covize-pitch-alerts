@@ -7,6 +7,8 @@ gem 'rails', '4.2.0'
 gem 'bootstrap-sass', '~> 3.3.3'
 # Use postgresql as the database for Active Record
 gem 'pg'
+# Use devise for authentication
+gem 'devise'
 # Heroku gem
 gem 'rails_12factor', group: :production
 # Use SCSS for stylesheets
