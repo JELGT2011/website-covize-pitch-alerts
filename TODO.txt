@@ -1,0 +1,5 @@
+add fields to database (such as image links)
+
+2 apps
+    free version has limited filtering and ads (4 listings per month)
+    paid version removes all filters (monthly subscription)

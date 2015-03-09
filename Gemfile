@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
+# Bootstrap for front-end UI
+gem 'bootstrap-sass', '~> 3.3.3'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Heroku gem

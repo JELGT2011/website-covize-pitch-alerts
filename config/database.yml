@@ -6,7 +6,6 @@ default: &default
 development:
   <<: *default
   database: website-covize-pitch-alerts_development
-  template: template0
   username: root
   password: root
   host: localhost
@@ -14,7 +13,6 @@ development:
 test:
   <<: *default
   database: website-covize-pitch-alerts_test
-  template: template0
   username: root
   password: root
   host: localhost
