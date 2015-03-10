@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   
-  devise_for :admins
+  devise_for :admins, controllers: {
+    registrations: "admins/registrations"
+  }
+  
   resources :pitch_events
 
   root 'pitch_events#index'

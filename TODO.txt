@@ -1,4 +1,6 @@
 add fields to database (such as image links)
+add form validators
+add time/date filtering and checking
 
 2 apps
     free version has limited filtering and ads (4 listings per month)
