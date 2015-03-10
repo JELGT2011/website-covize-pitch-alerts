@@ -9,8 +9,11 @@
     <thead>
       <tr>
         <th>Event name</th>
+        <th>Address 1</th>
+        <th>Address 2</th>
         <th>City</th>
         <th>State</th>
+        <th>Zip</th>
         <th>Event start</th>
         <th>Event end</th>
       </tr>
@@ -20,8 +23,11 @@
       <% @pitch_events.each do |pitch_event| %>
         <tr>
           <td><%= pitch_event.event_name %></td>
+          <td><%= pitch_event.address_1 %></td>
+          <td><%= pitch_event.address_2 %></td>
           <td><%= pitch_event.city %></td>
           <td><%= pitch_event.state %></td>
+          <td><%= pitch_event.zip %></td>
           <td><%= pitch_event.event_start %></td>
           <td><%= pitch_event.event_end %></td>
           <td><%= link_to 'Show', pitch_event %></td>

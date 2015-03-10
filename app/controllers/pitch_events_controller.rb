@@ -4,9 +4,10 @@ class PitchEventsController < ApplicationController
   # GET /pitch_events
   # GET /pitch_events.json
   def index
-    @pitch_events = PitchEvent.all
-    if params[:limit]
+    if params[:limit].present?
       @pitch_events = @pitch_events[0, params[:limit].to_i]
+    else
+      @pitch_events = PitchEvent.all
     end
     
   end
@@ -73,6 +74,6 @@ class PitchEventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pitch_event_params
-      params.require(:pitch_event).permit(:event_name, :org_name, :city, :state, :event_start, :event_end, :registration_deadline, :detail_link, :contact_name, :contact_number, :contact_email, :location, :woman, :ethnic, :industry)
+      params.require(:pitch_event).permit(:event_name, :org_name, :address_1, :address_2, :city, :state, :zip, :event_start, :event_end, :registration_deadline, :detail_link, :contact_name, :contact_number, :contact_email, :woman, :ethnic, :industry, :latitude, :longitude)
     end
 end

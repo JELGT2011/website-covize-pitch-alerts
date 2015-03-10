@@ -9,6 +9,8 @@ gem 'bootstrap-sass', '~> 3.3.3'
 gem 'pg'
 # Use devise for authentication
 gem 'devise'
+# Use geocoder for location data
+gem 'geocoder'
 # Heroku gem
 gem 'rails_12factor', group: :production
 # Use SCSS for stylesheets

@@ -37,8 +37,11 @@ ActiveRecord::Schema.define(version: 20150309232752) do
   create_table "pitch_events", force: :cascade do |t|
     t.string   "event_name"
     t.string   "org_name"
+    t.string   "address_1"
+    t.string   "address_2"
     t.string   "city"
     t.string   "state"
+    t.string   "zip"
     t.string   "event_start"
     t.string   "event_end"
     t.string   "registration_deadline"
@@ -50,6 +53,8 @@ ActiveRecord::Schema.define(version: 20150309232752) do
     t.boolean  "woman"
     t.string   "ethnic"
     t.string   "industry"
+    t.float    "latitude"
+    t.float    "longitude"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
   end
