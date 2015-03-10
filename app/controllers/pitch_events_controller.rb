@@ -1,13 +1,18 @@
 class PitchEventsController < ApplicationController
   before_action :set_pitch_event, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_admin!, except: [:index]
 
   # GET /pitch_events
   # GET /pitch_events.json
   def index
+    @pitch_events = PitchEvent.all
+    
+    if params[:within].present? and params[:user_location]
+      @pitch_events = PitchEvent.near(params[:user_location], params[:within].to_i)
+    end
+    
     if params[:limit].present?
       @pitch_events = @pitch_events[0, params[:limit].to_i]
-    else
-      @pitch_events = PitchEvent.all
     end
     
   end

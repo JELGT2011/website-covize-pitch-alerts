@@ -49,7 +49,6 @@ ActiveRecord::Schema.define(version: 20150309232752) do
     t.string   "contact_name"
     t.string   "contact_number"
     t.string   "contact_email"
-    t.string   "location"
     t.boolean  "woman"
     t.string   "ethnic"
     t.string   "industry"

@@ -11,6 +11,8 @@ gem 'pg'
 gem 'devise'
 # Use geocoder for location data
 gem 'geocoder'
+# Use faker for generating dummy data
+gem 'faker'
 # Heroku gem
 gem 'rails_12factor', group: :production
 # Use SCSS for stylesheets
