@@ -18,7 +18,7 @@ class PitchEventsControllerTest < ActionController::TestCase
 
   test "should create pitch_event" do
     assert_difference('PitchEvent.count') do
-      post :create, pitch_event: { city: @pitch_event.city, contact_email: @pitch_event.contact_email, contact_name: @pitch_event.contact_name, contact_number: @pitch_event.contact_number, detail_link: @pitch_event.detail_link, ethnic: @pitch_event.ethnic, event_end: @pitch_event.event_end, event_name: @pitch_event.event_name, event_start: @pitch_event.event_start, industry: @pitch_event.industry, location: @pitch_event.location, org_name: @pitch_event.org_name, registration_deadline: @pitch_event.registration_deadline, state: @pitch_event.state, woman: @pitch_event.woman }
+      post :create, pitch_event: {city: @pitch_event.city, contact_email: @pitch_event.contact_email, contact_name: @pitch_event.contact_name, contact_number: @pitch_event.contact_number, detail_link: @pitch_event.detail_link, ethnic: @pitch_event.ethnic, event_end: @pitch_event.event_end, event_name: @pitch_event.event_name, event_start: @pitch_event.event_start, industry: @pitch_event.industry, location: @pitch_event.location, org_name: @pitch_event.org_name, registration_deadline: @pitch_event.registration_deadline, state: @pitch_event.state, woman: @pitch_event.woman}
     end
 
     assert_redirected_to pitch_event_path(assigns(:pitch_event))
@@ -35,7 +35,7 @@ class PitchEventsControllerTest < ActionController::TestCase
   end
 
   test "should update pitch_event" do
-    patch :update, id: @pitch_event, pitch_event: { city: @pitch_event.city, contact_email: @pitch_event.contact_email, contact_name: @pitch_event.contact_name, contact_number: @pitch_event.contact_number, detail_link: @pitch_event.detail_link, ethnic: @pitch_event.ethnic, event_end: @pitch_event.event_end, event_name: @pitch_event.event_name, event_start: @pitch_event.event_start, industry: @pitch_event.industry, location: @pitch_event.location, org_name: @pitch_event.org_name, registration_deadline: @pitch_event.registration_deadline, state: @pitch_event.state, woman: @pitch_event.woman }
+    patch :update, id: @pitch_event, pitch_event: {city: @pitch_event.city, contact_email: @pitch_event.contact_email, contact_name: @pitch_event.contact_name, contact_number: @pitch_event.contact_number, detail_link: @pitch_event.detail_link, ethnic: @pitch_event.ethnic, event_end: @pitch_event.event_end, event_name: @pitch_event.event_name, event_start: @pitch_event.event_start, industry: @pitch_event.industry, location: @pitch_event.location, org_name: @pitch_event.org_name, registration_deadline: @pitch_event.registration_deadline, state: @pitch_event.state, woman: @pitch_event.woman}
     assert_redirected_to pitch_event_path(assigns(:pitch_event))
   end
 

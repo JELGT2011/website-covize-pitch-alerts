@@ -1,85 +1,85 @@
 <%= form_for(@pitch_event) do |f| %>
-  <% if @pitch_event.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@pitch_event.errors.count, "error") %> prohibited this pitch_event from being saved:</h2>
+    <% if @pitch_event.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@pitch_event.errors.count, "error") %> prohibited this pitch_event from being saved:</h2>
 
-      <ul>
-      <% @pitch_event.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% @pitch_event.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :event_name %><br>
+      <%= f.text_field :event_name %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :event_name %><br>
-    <%= f.text_field :event_name %>
-  </div>
-  <div class="field">
-    <%= f.label :org_name %><br>
-    <%= f.text_field :org_name %>
-  </div>
-  <div class="field">
-    <%= f.label :address_1 %><br>
-    <%= f.text_field :address_1 %>
-  </div>
-  <div class="field">
-    <%= f.label :address_2 %><br>
-    <%= f.text_field :address_2 %>
-  </div>
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_field :city %>
-  </div>
-  <div class="field">
-    <%= f.label :state %><br>
-    <%= f.text_field :state %>
-  </div>
-  <div class="field">
-    <%= f.label :zip %><br>
-    <%= f.text_field :zip %>
-  </div>
-  <div class="field">
-    <%= f.label :event_start %><br>
-    <%= f.text_field :event_start %>
-  </div>
-  <div class="field">
-    <%= f.label :event_end %><br>
-    <%= f.text_field :event_end %>
-  </div>
-  <div class="field">
-    <%= f.label :registration_deadline %><br>
-    <%= f.text_field :registration_deadline %>
-  </div>
-  <div class="field">
-    <%= f.label :detail_link %><br>
-    <%= f.text_field :detail_link %>
-  </div>
-  <div class="field">
-    <%= f.label :contact_name %><br>
-    <%= f.text_field :contact_name %>
-  </div>
-  <div class="field">
-    <%= f.label :contact_number %><br>
-    <%= f.text_field :contact_number %>
-  </div>
-  <div class="field">
-    <%= f.label :contact_email %><br>
-    <%= f.text_field :contact_email %>
-  </div>
-  <div class="field">
-    <%= f.label :woman %><br>
-    <%= f.check_box :woman %>
-  </div>
-  <div class="field">
-    <%= f.label :ethnic %><br>
-    <%= f.text_field :ethnic %>
-  </div>
-  <div class="field">
-    <%= f.label :industry %><br>
-    <%= f.text_field :industry %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="field">
+      <%= f.label :org_name %><br>
+      <%= f.text_field :org_name %>
+    </div>
+    <div class="field">
+      <%= f.label :address_1 %><br>
+      <%= f.text_field :address_1 %>
+    </div>
+    <div class="field">
+      <%= f.label :address_2 %><br>
+      <%= f.text_field :address_2 %>
+    </div>
+    <div class="field">
+      <%= f.label :city %><br>
+      <%= f.text_field :city %>
+    </div>
+    <div class="field">
+      <%= f.label :state %><br>
+      <%= f.text_field :state %>
+    </div>
+    <div class="field">
+      <%= f.label :zip %><br>
+      <%= f.text_field :zip %>
+    </div>
+    <div class="field">
+      <%= f.label :event_start %><br>
+      <%= f.text_field :event_start %>
+    </div>
+    <div class="field">
+      <%= f.label :event_end %><br>
+      <%= f.text_field :event_end %>
+    </div>
+    <div class="field">
+      <%= f.label :registration_deadline %><br>
+      <%= f.text_field :registration_deadline %>
+    </div>
+    <div class="field">
+      <%= f.label :detail_link %><br>
+      <%= f.text_field :detail_link %>
+    </div>
+    <div class="field">
+      <%= f.label :contact_name %><br>
+      <%= f.text_field :contact_name %>
+    </div>
+    <div class="field">
+      <%= f.label :contact_number %><br>
+      <%= f.text_field :contact_number %>
+    </div>
+    <div class="field">
+      <%= f.label :contact_email %><br>
+      <%= f.text_field :contact_email %>
+    </div>
+    <div class="field">
+      <%= f.label :woman %><br>
+      <%= f.check_box :woman %>
+    </div>
+    <div class="field">
+      <%= f.label :ethnic %><br>
+      <%= f.text_field :ethnic %>
+    </div>
+    <div class="field">
+      <%= f.label :industry %><br>
+      <%= f.text_field :industry %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>

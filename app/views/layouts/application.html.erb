@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WebsiteCovizePitchAlerts</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <title>Covize Pitch Alerts</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body class="container-fluid">
-  
-  <%= render 'layouts/navbar' %>
-  
-  <div class="container-fluid">
-    
-    <%= yield %>
-  
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    
-  </div>
+
+<%= render 'layouts/navbar' %>
+
+<div class="container-fluid">
+
+  <% if flash[:notice] %>
+      <div class="panel panel-primary">
+        <div class="panel-body">
+          <p class="notice"><%= notice %></p>
+        </div>
+      </div>
+  <% end %>
+
+  <% if flash[:alert] %>
+      <div class="panel panel-danger">
+        <div class="panel-body">
+          <p class="alert"><%= alert %></p>
+        </div>
+      </div>
+  <% end %>
+
+  <%= yield %>
+
+</div>
 
 </body>
 </html>

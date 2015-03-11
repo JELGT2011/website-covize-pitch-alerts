@@ -1,26 +1,25 @@
-
 <div class="panel panel-primary">
-  
+
   <div class="panel-heading">
     <h1>Listing Pitch Events</h1>
   </div>
-  
+
   <table class="table">
     <thead>
-      <tr>
-        <th>Event name</th>
-        <th>Address 1</th>
-        <th>Address 2</th>
-        <th>City</th>
-        <th>State</th>
-        <th>Zip</th>
-        <th>Event start</th>
-        <th>Event end</th>
-      </tr>
+    <tr>
+      <th>Event name</th>
+      <th>Address 1</th>
+      <th>Address 2</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Event start</th>
+      <th>Event end</th>
+    </tr>
     </thead>
-    
+
     <tbody>
-      <% @pitch_events.each do |pitch_event| %>
+    <% @pitch_events.each do |pitch_event| %>
         <tr>
           <td><%= pitch_event.event_name %></td>
           <td><%= pitch_event.address_1 %></td>
@@ -30,16 +29,31 @@
           <td><%= pitch_event.zip %></td>
           <td><%= pitch_event.event_start %></td>
           <td><%= pitch_event.event_end %></td>
-          <td><%= link_to 'Show', pitch_event %></td>
-          <td><%= link_to 'Edit', edit_pitch_event_path(pitch_event) %></td>
-          <td><%= link_to 'Destroy', pitch_event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+          <td>
+            <%= link_to pitch_event do %>
+                <span class="glyphicon glyphicon-eye-open"></span>
+            <% end %>
+          </td>
+
+          <td>
+            <%= link_to edit_pitch_event_path(pitch_event) do %>
+                <span class="glyphicon glyphicon-edit"></span>
+            <% end %>
+          </td>
+
+          <td>
+            <%= link_to pitch_event, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <span class="glyphicon glyphicon-remove"></span>
+            <% end %>
+          </td>
+
         </tr>
-      <% end %>
+    <% end %>
     </tbody>
   </table>
 </div>
 
-<br>
-
-<%= link_to 'New Pitch Event', new_pitch_event_path, { :class => "btn btn-default"} %>
-
+<%= link_to new_pitch_event_path do %>
+    <button class="btn btn-primary">New Pitch Event</button>
+<% end %>

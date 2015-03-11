@@ -6,15 +6,15 @@ class PitchEventsController < ApplicationController
   # GET /pitch_events.json
   def index
     @pitch_events = PitchEvent.all
-    
+
     if params[:within].present? and params[:user_location]
       @pitch_events = PitchEvent.near(params[:user_location], params[:within].to_i)
     end
-    
+
     if params[:limit].present?
       @pitch_events = @pitch_events[0, params[:limit].to_i]
     end
-    
+
   end
 
   # GET /pitch_events/1
@@ -72,13 +72,13 @@ class PitchEventsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_pitch_event
-      @pitch_event = PitchEvent.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_pitch_event
+    @pitch_event = PitchEvent.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def pitch_event_params
-      params.require(:pitch_event).permit(:event_name, :org_name, :address_1, :address_2, :city, :state, :zip, :event_start, :event_end, :registration_deadline, :detail_link, :contact_name, :contact_number, :contact_email, :woman, :ethnic, :industry, :latitude, :longitude)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def pitch_event_params
+    params.require(:pitch_event).permit(:event_name, :org_name, :address_1, :address_2, :city, :state, :zip, :event_start, :event_end, :registration_deadline, :detail_link, :contact_name, :contact_number, :contact_email, :woman, :ethnic, :industry, :latitude, :longitude)
+  end
 end
