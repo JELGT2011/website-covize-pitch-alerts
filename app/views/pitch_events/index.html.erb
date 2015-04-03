@@ -3,6 +3,14 @@
   <div class="panel-heading">
     <h1>Listing Pitch Events</h1>
   </div>
+  <br>
+
+  <div class="container-fluid">
+    <%= link_to new_pitch_event_path do %>
+        <button class="btn btn-primary">New Pitch Event</button>
+    <% end %>
+  </div>
+  <br>
 
   <table class="table">
     <thead>
@@ -54,7 +62,3 @@
   </table>
 
 </div>
-
-<%= link_to new_pitch_event_path do %>
-    <button class="btn btn-primary">New Pitch Event</button>
-<% end %>

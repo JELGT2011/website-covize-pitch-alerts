@@ -3,6 +3,7 @@ class CreatePitchEvents < ActiveRecord::Migration
     create_table :pitch_events do |t|
       t.string :event_name
       t.string :org_name
+      t.attachment :logo
       t.string :address_1
       t.string :address_2
       t.string :city
@@ -15,6 +16,8 @@ class CreatePitchEvents < ActiveRecord::Migration
       t.string :contact_name
       t.string :contact_number
       t.string :contact_email
+      t.string :local
+      t.string :national
       t.boolean :woman
       t.string :ethnic
       t.string :industry

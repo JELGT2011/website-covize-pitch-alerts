@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150309232752) do
+ActiveRecord::Schema.define(version: 20150403121255) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,10 @@ ActiveRecord::Schema.define(version: 20150309232752) do
   create_table "pitch_events", force: :cascade do |t|
     t.string   "event_name"
     t.string   "org_name"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
     t.string   "address_1"
     t.string   "address_2"
     t.string   "city"
@@ -49,6 +53,8 @@ ActiveRecord::Schema.define(version: 20150309232752) do
     t.string   "contact_name"
     t.string   "contact_number"
     t.string   "contact_email"
+    t.string   "local"
+    t.string   "national"
     t.boolean  "woman"
     t.string   "ethnic"
     t.string   "industry"
@@ -56,6 +62,11 @@ ActiveRecord::Schema.define(version: 20150309232752) do
     t.float    "longitude"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
