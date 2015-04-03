@@ -9,6 +9,16 @@
 </p>
 
 <p>
+  <strong>Logo location:</strong>
+  <%= @pitch_event.logo.url %>
+</p>
+
+<p>
+  <strong>Logo:</strong>
+  <%= image_tag @pitch_event.logo.url(:square) %>
+</p>
+
+<p>
   <strong>Address Line 1:</strong>
   <%= @pitch_event.address_1 %>
 </p>
