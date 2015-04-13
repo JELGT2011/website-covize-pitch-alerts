@@ -4,6 +4,7 @@ class CreatePitchEvents < ActiveRecord::Migration
       t.string :event_name
       t.string :org_name
 
+      t.attachment :photo
       t.string :photo_file_name
       t.string :photo_content_type
       t.integer :photo_file_size
@@ -17,6 +18,7 @@ class CreatePitchEvents < ActiveRecord::Migration
       t.string :event_start
       t.string :event_end
       t.string :registration_deadline
+      t.string :registration_link
       t.string :detail_link
       t.string :contact_name
       t.string :contact_number

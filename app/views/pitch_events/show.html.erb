@@ -10,7 +10,7 @@
 
 <p>
   <strong>Logo:</strong>
-  <%= image_tag @pitch_event.logo.url(:thumb) %>
+  <%= image_tag @pitch_event.photo.url(:thumb) %>
 </p>
 
 <p>
@@ -51,6 +51,11 @@
 <p>
   <strong>Registration deadline:</strong>
   <%= @pitch_event.registration_deadline %>
+</p>
+
+<p>
+  <strong>Registration link:</strong>
+  <%= @pitch_event.registration_link %>
 </p>
 
 <p>

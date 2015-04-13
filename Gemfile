@@ -15,10 +15,12 @@ gem 'devise'
 gem 'geocoder'
 # Use faker for generating dummy data
 gem 'faker'
+# Use Paperclip to handle image upload
+gem 'paperclip'
+# jQuery UI elements
+gem 'jquery-ui-rails'
 # Heroku gem
 gem 'rails_12factor', group: :production
-# User Paperclip to handle image upload
-gem 'paperclip'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 # Use CoffeeScript for .coffee assets and views
