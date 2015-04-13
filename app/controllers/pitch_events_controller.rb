@@ -5,10 +5,31 @@ class PitchEventsController < ApplicationController
   # GET /pitch_events
   # GET /pitch_events.json
   def index
-    @pitch_events = PitchEvent.all
 
-    if params[:within].present? and params[:user_location]
+    if params[:within].present? and params[:user_location].present?
       @pitch_events = PitchEvent.near(params[:user_location], params[:within].to_i)
+    else
+      @pitch_events = PitchEvent.all
+    end
+
+    if params[:local].present?
+      @pitch_events = PitchEvent.find_each local: TRUE
+    end
+
+    if params[:national].present?
+      @pitch_events = @pitch_events.find_each national: TRUE
+    end
+
+    if params[:woman_founder].present?
+      @pitch_events = @pitch_events.find_each woman_founder: TRUE
+    end
+
+    if params[:ethnic_founder].present?
+      @pitch_events = @pitch_events.find_each ethnic_founder: TRUE
+    end
+
+    if params[:industry].present?
+      @pitch_events = @pitch_events.find_each industry: params[:industry]
     end
 
     if params[:limit].present?
@@ -79,6 +100,6 @@ class PitchEventsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def pitch_event_params
-    params.require(:pitch_event).permit(:event_name, :org_name, :logo, :address_1, :address_2, :city, :state, :zip, :event_start, :event_end, :registration_deadline, :detail_link, :contact_name, :contact_number, :contact_email, :woman, :ethnic, :industry, :latitude, :longitude)
+    params.require(:pitch_event).permit(:event_name, :org_name, :logo, :address_1, :address_2, :city, :state, :zip, :event_start, :event_end, :registration_deadline, :detail_link, :contact_name, :contact_number, :contact_email, :local, :national, :woman_founder, :ethnic_founder, :industry, :latitude, :longitude)
   end
 end

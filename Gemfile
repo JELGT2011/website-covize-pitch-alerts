@@ -17,12 +17,8 @@ gem 'geocoder'
 gem 'faker'
 # Heroku gem
 gem 'rails_12factor', group: :production
-# Use jQuery-fileupload to handle image upload
-gem 'jquery-fileupload-rails'
-# User Paperclip to handle interface with S3 storage
+# User Paperclip to handle image upload
 gem 'paperclip'
-# Use Amazon Web Service SDK for storage
-gem 'aws-sdk'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 # Use CoffeeScript for .coffee assets and views

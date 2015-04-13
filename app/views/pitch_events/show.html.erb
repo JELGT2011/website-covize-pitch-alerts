@@ -9,13 +9,8 @@
 </p>
 
 <p>
-  <strong>Logo location:</strong>
-  <%= @pitch_event.logo.url %>
-</p>
-
-<p>
   <strong>Logo:</strong>
-  <%= image_tag @pitch_event.logo.url(:square) %>
+  <%= image_tag @pitch_event.logo.url(:thumb) %>
 </p>
 
 <p>
@@ -79,13 +74,23 @@
 </p>
 
 <p>
-  <strong>Woman:</strong>
-  <%= @pitch_event.woman %>
+  <strong>Local:</strong>
+  <%= @pitch_event.local %>
 </p>
 
 <p>
-  <strong>Ethnic:</strong>
-  <%= @pitch_event.ethnic %>
+  <strong>National:</strong>
+  <%= @pitch_event.national %>
+</p>
+
+<p>
+  <strong>Woman Founder:</strong>
+  <%= @pitch_event.woman_founder %>
+</p>
+
+<p>
+  <strong>Ethnic Founder:</strong>
+  <%= @pitch_event.ethnic_founder %>
 </p>
 
 <p>

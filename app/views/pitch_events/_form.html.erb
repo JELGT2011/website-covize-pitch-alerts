@@ -1,4 +1,4 @@
-<%= form_for(@pitch_event, multipart: true) do |f| %>
+<%= form_for(@pitch_event, :html => { :multipart => true } ) do |f| %>
     <% if @pitch_event.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@pitch_event.errors.count, "error") %> prohibited this pitch_event from being saved:</h2>
@@ -87,13 +87,23 @@
     </div>
 
     <div class="field">
-      <%= f.label :woman %><br>
-      <%= f.check_box :woman %>
+      <%= f.label :local %><br>
+      <%= f.check_box :local %>
     </div>
 
     <div class="field">
-      <%= f.label :ethnic %><br>
-      <%= f.text_field :ethnic %>
+      <%= f.label :national %><br>
+      <%= f.check_box :national %>
+    </div>
+
+    <div class="field">
+      <%= f.label :woman_founder %><br>
+      <%= f.check_box :woman_founder %>
+    </div>
+
+    <div class="field">
+      <%= f.label :ethnic_founder %><br>
+      <%= f.text_field :ethnic_founder %>
     </div>
 
     <div class="field">

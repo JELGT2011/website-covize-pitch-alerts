@@ -5,3 +5,6 @@ add time/date filtering and checking
 2 apps
     free version has limited filtering and ads (4 listings per month)
     paid version removes all filters (monthly subscription)
+
+
+MAKE NOTE OF IE BUG FOR FILE UPLOAD
