@@ -6,31 +6,19 @@ class PitchEventsController < ApplicationController
   # GET /pitch_events.json
   def index
 
+    @pitch_events = PitchEvent.all
+
+    filtering_params(params).each do |key, value|
+      if value.present?
+        @pitch_events = @pitch_events.public_send(key, value)
+      end
+    end
+
+=begin
     if params[:within].present? and params[:user_location].present?
       @pitch_events = PitchEvent.near(params[:user_location], params[:within].to_i)
-    else
-      @pitch_events = PitchEvent.all
     end
-
-    if params[:local].present?
-      @pitch_events = PitchEvent.find_each local: TRUE
-    end
-
-    if params[:national].present?
-      @pitch_events = @pitch_events.find_each national: TRUE
-    end
-
-    if params[:woman_founder].present?
-      @pitch_events = @pitch_events.find_each woman_founder: TRUE
-    end
-
-    if params[:ethnic_founder].present?
-      @pitch_events = @pitch_events.find_each ethnic_founder: TRUE
-    end
-
-    if params[:industry].present?
-      @pitch_events = @pitch_events.find_each industry: params[:industry]
-    end
+=end
 
     if params[:limit].present?
       @pitch_events = @pitch_events[0, params[:limit].to_i]
@@ -124,6 +112,18 @@ class PitchEventsController < ApplicationController
         :industry,
         :latitude,
         :longitude
+    )
+  end
+
+  def filtering_params(params)
+    params.slice(
+              :local,
+              :national,
+              :woman_founder,
+              :ethnic_founder,
+              :starting_index,
+              :ending_index,
+              :limit
     )
   end
 end
