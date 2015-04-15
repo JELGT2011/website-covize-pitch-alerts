@@ -6,7 +6,7 @@ This app uses a standard REST architecture, but has a separate scope for three r
 
 * to allow calls without admin authentication
 * to allow for slightly different filtering capabilities
-* to default all requests to JSON (more for convenience)
+* to default all requests to not include passed events
 
 With that, the base url will be `covize-pitch-alerts.herokuapp.com/api/`
 
@@ -17,7 +17,7 @@ which would return a listing of all pitch events in JSON format.
 For now, everything is passed in as a url parameter.  Here is a listing:
 
 | HTTP Verb | Parameter                  | Description                                                                    |
-| --------- | :------------------------: | -----------------------------------------------------------------------------: |
+| :-------- | :------------------------- | :----------------------------------------------------------------------------- |
 | GET       | `local={BOOL}`             | requires returned pitch events to be local                                     |
 | GET       | `national={BOOL}`          | requires returned pitch events to be national                                  |
 | GET       | `woman_founder={BOOL}`     | requires returned pitch events to target startups with a woman founder         |
