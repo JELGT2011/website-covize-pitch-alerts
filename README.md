@@ -26,6 +26,7 @@ For now, everything is passed in as a url parameter.  Here is a listing:
 
 
 Fields for the Company Profile data base:
+
 | Field Name        | Storage Type | Description                                     |
 | :---------------- | :----------- | :---------------------------------------------- |
 | Personal Name     | String       | Person's Full name who downloaded the app       |
