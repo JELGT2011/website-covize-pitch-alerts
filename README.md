@@ -21,5 +21,5 @@ For now, everything is passed in as a url parameter.  Here is a listing:
 | GET       | `local={BOOL}`             | requires returned pitch events to be local                                     |
 | GET       | `national={BOOL}`          | requires returned pitch events to be national                                  |
 | GET       | `woman_founder={BOOL}`     | requires returned pitch events to target startups with a woman founder         |
-| GET       | `ethnic_founder={BOOL}`    | requires returned pitch events to target startups with a non-Caucasian founder |
+| GET       | `ethnic_founder={BOOL}`    | requires returned pitch events to target startups with a founder of ethnic backgroud |
 | GET       | `limit={INT}`              | limits the number of responses                                                 |
