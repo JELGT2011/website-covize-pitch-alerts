@@ -23,3 +23,17 @@ For now, everything is passed in as a url parameter.  Here is a listing:
 | GET       | `woman_founder={BOOL}`     | requires returned pitch events to target startups with a woman founder         |
 | GET       | `ethnic_founder={BOOL}`    | requires returned pitch events to target startups with a founder of ethnic backgroud |
 | GET       | `limit={INT}`              | limits the number of responses                                                 |
+
+
+Fields for the Company Profile data base:
+| Field Name        | Storage Type | Description                                     |
+| :---------------- | :----------- | :---------------------------------------------- |
+| Personal Name     | String       | Person's Full name who downloaded the app       |
+| Email             | String       | Email provided by user                          |
+| Company Name      | String       | Name of the Startup Company                     |
+| Industry          | String       | Industry that best describes their company      |
+| Locale            | String       | Major market that best describes their location |
+| Female Founder    | String       | Their company was founded by a female           |
+| Ethnic Founder    | String       | Their founder was of ethnic background          |
+| Capital Goal      | String       | Company's Capital Goal                          |
+| Fundraising Stage | String       | Stage of their Fundraising                      |
