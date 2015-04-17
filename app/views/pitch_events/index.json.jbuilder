@@ -19,7 +19,7 @@ json.array!(@pitch_events) do |pitch_event|
                 :contact_email,
                 :local,
                 :national,
-                :woman_founder,
+                :female_founder,
                 :ethnic_founder,
                 :industry
 

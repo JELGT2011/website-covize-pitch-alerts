@@ -16,7 +16,7 @@ class PitchEvent < ActiveRecord::Base
 
   scope :local, -> (local) { where local: local }
   scope :national, -> (national) { where national: national }
-  scope :woman_founder, -> (woman_founder) { where woman_founder: woman_founder }
+  scope :female_founder, -> (female_founder) { where female_founder: female_founder }
   scope :ethnic_founder, -> (ethnic_founder) { where ethnic_founder: ethnic_founder }
 
   private

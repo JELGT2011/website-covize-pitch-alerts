@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20150403121255) do
     t.string   "photo_file_name"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
     t.datetime "photo_uploaded_at"
     t.string   "address_1"
     t.string   "address_2"
@@ -56,7 +57,7 @@ ActiveRecord::Schema.define(version: 20150403121255) do
     t.string   "contact_email"
     t.boolean  "local"
     t.boolean  "national"
-    t.boolean  "woman_founder"
+    t.boolean  "female_founder"
     t.boolean  "ethnic_founder"
     t.string   "industry"
     t.float    "latitude"
@@ -66,8 +67,17 @@ ActiveRecord::Schema.define(version: 20150403121255) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "personal_name"
+    t.string   "email"
+    t.string   "company_name"
+    t.string   "industry"
+    t.string   "locale"
+    t.string   "female_founder"
+    t.string   "ethnic_founder"
+    t.string   "capital_goal"
+    t.string   "fundraising_stage"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
 end

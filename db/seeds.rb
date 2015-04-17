@@ -26,7 +26,7 @@ Faker::Config.locale = 'en-US'
       contact_email: Faker::Internet.email,
       local: [true, false].sample,
       national: [true, false].sample,
-      woman_founder: [true, false].sample,
+      female_founder: [true, false].sample,
       ethnic_founder: [true, false].sample,
       industry: ["technology", "education", "medical", "entertainment", "automotive"].sample,
       latitude: Faker::Address.latitude,

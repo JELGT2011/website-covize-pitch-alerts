@@ -127,7 +127,7 @@ class PitchEventsController < ApplicationController
         :contact_email,
         :local,
         :national,
-        :woman_founder,
+        :female_founder,
         :ethnic_founder,
         :industry,
         :latitude,
@@ -139,7 +139,7 @@ class PitchEventsController < ApplicationController
     params.slice(
               :local,
               :national,
-              :woman_founder,
+              :female_founder,
               :ethnic_founder,
               :starting_index,
               :ending_index,

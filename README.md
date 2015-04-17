@@ -1,5 +1,55 @@
 # Covize Pitch Alerts Web App
 
+## Database Schema
+
+Fields for the User table:
+
+| Field Name            | Storage Type | Description                                     |
+| :-------------------- | :----------- | :---------------------------------------------- |
+| personal_name         | string       | Person's Full name who downloaded the app       |
+| email                 | string       | Email provided by user                          |
+| company_name          | string       | Name of the Startup Company                     |
+| industry              | string       | Industry that best describes their company      |
+| locale                | string       | Major market that best describes their location |
+| female_founder        | string       | Their company was founded by a female           |
+| ethnic_founder        | string       | Their founder was of ethnic background          |
+| capital_goal          | string       | Company's Capital Goal                          |
+| fundraising_stage     | string       | Stage of their Fundraising                      |
+
+
+Fields for the Pitch Event table:
+
+| Field Name            | Storage Type | Description                                     |
+| :-------------------- | :----------- | :---------------------------------------------- |
+| event_name            | string       |                                                 |
+| org_name              | string       |                                                 |
+| photo_file_name       | string       |                                                 |
+| photo_content_type    | string       |                                                 |
+| photo_file_size       | integer      |                                                 |
+| photo_updated_at      | datetime     |                                                 |
+| photo_uploaded_at     | datetime     |                                                 |
+| address_1             | string       |                                                 |
+| address_2             | string       |                                                 |
+| city                  | string       |                                                 |
+| state                 | string       |                                                 |
+| zip                   | string       |                                                 |
+| event_start           | string       |                                                 |
+| event_end             | string       |                                                 |
+| registration_deadline | string       |                                                 |
+| registration_link     | string       |                                                 |
+| detail_link           | string       |                                                 |
+| contact_name          | string       |                                                 |
+| contact_number        | string       |                                                 |
+| contact_email         | string       |                                                 |
+| local                 | boolean      |                                                 |
+| national              | boolean      |                                                 |
+| female_founder        | boolean      |                                                 |
+| ethnic_founder        | boolean      |                                                 |
+| industry              | string       |                                                 |
+| latitude              | float        |                                                 |
+| longitude             | float        |                                                 |
+
+
 ## API
 
 This app uses a standard REST architecture, but has a separate scope for three reasons:
@@ -16,28 +66,12 @@ which would return a listing of all pitch events in JSON format.
 
 For now, everything is passed in as a url parameter.  Here is a listing:
 
-| HTTP Verb | Parameter                  | Description                                                                                                                          |
-| :-------- | :------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
-| GET       | `local={BOOL}`             | requires returned pitch events to be local                                                                                           |
-| GET       | `national={BOOL}`          | requires returned pitch events to be national                                                                                        |
-| GET       | `woman_founder={BOOL}`     | requires returned pitch events to target startups with a woman founder                                                               |
-| GET       | `ethnic_founder={BOOL}`    | requires returned pitch events to target startups with a founder of ethnic background                                                |
-| GET       | `sort_order={ATTRIBUTE}`   | sorts according to the following whitelisted attributes: "event_name", "event_start" (default), "event_end", "registration_deadline" |
-| GET       | `limit={INT}`              | limits the number of responses                                                                                                       |
-
-
-## Database Schema
-
-Fields for the Company Profile data base:
-
-| Field Name        | Storage Type | Description                                     |
-| :---------------- | :----------- | :---------------------------------------------- |
-| Personal Name     | String       | Person's Full name who downloaded the app       |
-| Email             | String       | Email provided by user                          |
-| Company Name      | String       | Name of the Startup Company                     |
-| Industry          | String       | Industry that best describes their company      |
-| Locale            | String       | Major market that best describes their location |
-| Female Founder    | String       | Their company was founded by a female           |
-| Ethnic Founder    | String       | Their founder was of ethnic background          |
-| Capital Goal      | String       | Company's Capital Goal                          |
-| Fundraising Stage | String       | Stage of their Fundraising                      |
+| HTTP Verb | Controller   | Parameter                  | Description                                                                                                                          |
+| :-------- | :----------- | :------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
+| GET       | Pitch Events | `local={BOOL}`             | requires returned pitch events to be local                                                                                           |
+| GET       | Pitch Events | `national={BOOL}`          | requires returned pitch events to be national                                                                                        |
+| GET       | Pitch Events | `female_founder={BOOL}`    | requires returned pitch events to target startups with a female founder                                                              |
+| GET       | Pitch Events | `ethnic_founder={BOOL}`    | requires returned pitch events to target startups with a founder of ethnic background                                                |
+| GET       | Pitch Events | `sort_order={ATTRIBUTE}`   | sorts according to the following whitelisted attributes: "event_name", "event_start" (default), "event_end", "registration_deadline" |
+| GET       | Pitch Events | `limit={INT}`              | limits the number of responses                                                                                                       |
+| POST      | Users        | ``                         | IN PROGRESS                                                                                                                          |

@@ -25,7 +25,7 @@ class CreatePitchEvents < ActiveRecord::Migration
       t.string :contact_email
       t.boolean :local
       t.boolean :national
-      t.boolean :woman_founder
+      t.boolean :female_founder
       t.boolean :ethnic_founder
       t.string :industry
       t.float :latitude
