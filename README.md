@@ -16,14 +16,17 @@ which would return a listing of all pitch events in JSON format.
 
 For now, everything is passed in as a url parameter.  Here is a listing:
 
-| HTTP Verb | Parameter                  | Description                                                                    |
-| :-------- | :------------------------- | :----------------------------------------------------------------------------- |
-| GET       | `local={BOOL}`             | requires returned pitch events to be local                                     |
-| GET       | `national={BOOL}`          | requires returned pitch events to be national                                  |
-| GET       | `woman_founder={BOOL}`     | requires returned pitch events to target startups with a woman founder         |
-| GET       | `ethnic_founder={BOOL}`    | requires returned pitch events to target startups with a founder of ethnic backgroud |
-| GET       | `limit={INT}`              | limits the number of responses                                                 |
+| HTTP Verb | Parameter                  | Description                                                                                                                          |
+| :-------- | :------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
+| GET       | `local={BOOL}`             | requires returned pitch events to be local                                                                                           |
+| GET       | `national={BOOL}`          | requires returned pitch events to be national                                                                                        |
+| GET       | `woman_founder={BOOL}`     | requires returned pitch events to target startups with a woman founder                                                               |
+| GET       | `ethnic_founder={BOOL}`    | requires returned pitch events to target startups with a founder of ethnic background                                                |
+| GET       | `sort_order={ATTRIBUTE}`   | sorts according to the following whitelisted attributes: "event_name", "event_start" (default), "event_end", "registration_deadline" |
+| GET       | `limit={INT}`              | limits the number of responses                                                                                                       |
 
+
+## Database Schema
 
 Fields for the Company Profile data base:
 

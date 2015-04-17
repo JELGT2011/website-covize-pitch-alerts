@@ -8,9 +8,29 @@ class PitchEventsController < ApplicationController
 
     @pitch_events = PitchEvent.all
 
+    # the public_send behavior is defined in the model using scopes
     filtering_params(params).each do |key, value|
       if value.present?
         @pitch_events = @pitch_events.public_send(key, value)
+      end
+    end
+
+    # default sort order to event start attribute
+    @pitch_events = @pitch_events.sort_by { |pitch_event| pitch_event.event_start }
+
+    # whitelist sorting params
+    # it's kind of a hack but I couldn't find a better way
+    if params[:sort_order].present?
+      case params[:sort_order]
+
+      when 'event_name'
+        @pitch_events = @pitch_events.sort_by { |pitch_event| pitch_event.event_name }
+      when 'event_start'
+        @pitch_events = @pitch_events.sort_by { |pitch_event| pitch_event.event_start }
+      when 'event_end'
+        @pitch_events = @pitch_events.sort_by { |pitch_event| pitch_event.event_end }
+      when 'registration_deadline'
+        @pitch_events = @pitch_events.sort_by { |pitch_event| pitch_event.registration_deadline }
       end
     end
 
