@@ -21,6 +21,7 @@ class PitchEventsController < ApplicationController
     # whitelist sorting params
     # it's kind of a hack but I couldn't find a better way
     if params[:sort_order].present?
+
       case params[:sort_order]
 
       when 'event_name'

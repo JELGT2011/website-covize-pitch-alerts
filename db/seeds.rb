@@ -8,7 +8,7 @@
 
 Faker::Config.locale = 'en-US'
 
-100.times do |i|
+50.times do |i|
   PitchEvent.create(
       event_name: Faker::Lorem.word,
       org_name: Faker::Company.name,

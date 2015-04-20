@@ -1,4 +1,49 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Personal name:</strong>
+  <%= @user.personal_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @user.company_name %>
+</p>
+
+<p>
+  <strong>Industry:</strong>
+  <%= @user.industry %>
+</p>
+
+<p>
+  <strong>Locale:</strong>
+  <%= @user.locale %>
+</p>
+
+<p>
+  <strong>Female founder:</strong>
+  <%= @user.female_founder %>
+</p>
+
+<p>
+  <strong>Ethnic founder:</strong>
+  <%= @user.ethnic_founder %>
+</p>
+
+<p>
+  <strong>Capital goal:</strong>
+  <%= @user.capital_goal %>
+</p>
+
+<p>
+  <strong>Fundraising stage:</strong>
+  <%= @user.fundraising_stage %>
+</p>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

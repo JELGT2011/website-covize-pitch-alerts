@@ -66,12 +66,12 @@ which would return a listing of all pitch events in JSON format.
 
 For now, everything is passed in as a url parameter.  Here is a listing:
 
-| HTTP Verb | Controller   | Parameter                  | Description                                                                                                                          |
-| :-------- | :----------- | :------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
-| GET       | Pitch Events | `local={BOOL}`             | requires returned pitch events to be local                                                                                           |
-| GET       | Pitch Events | `national={BOOL}`          | requires returned pitch events to be national                                                                                        |
-| GET       | Pitch Events | `female_founder={BOOL}`    | requires returned pitch events to target startups with a female founder                                                              |
-| GET       | Pitch Events | `ethnic_founder={BOOL}`    | requires returned pitch events to target startups with a founder of ethnic background                                                |
-| GET       | Pitch Events | `sort_order={ATTRIBUTE}`   | sorts according to the following whitelisted attributes: "event_name", "event_start" (default), "event_end", "registration_deadline" |
-| GET       | Pitch Events | `limit={INT}`              | limits the number of responses                                                                                                       |
-| POST      | Users        | ``                         | IN PROGRESS                                                                                                                          |
+| HTTP Verb | Controller   | Parameter                                  | Description                                                                                                                          |
+| :-------- | :----------- | :----------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
+| GET       | Pitch Events | `local={BOOL}`                             | requires returned pitch events to be local                                                                                           |
+| GET       | Pitch Events | `national={BOOL}`                          | requires returned pitch events to be national                                                                                        |
+| GET       | Pitch Events | `female_founder={BOOL}`                    | requires returned pitch events to target startups with a female founder                                                              |
+| GET       | Pitch Events | `ethnic_founder={BOOL}`                    | requires returned pitch events to target startups with a founder of ethnic background                                                |
+| GET       | Pitch Events | `sort_order={ATTRIBUTE}`                   | sorts according to the following whitelisted attributes: "event_name", "event_start" (default), "event_end", "registration_deadline" |
+| GET       | Pitch Events | `limit={INT}`                              | limits the number of responses                                                                                                       |
+| POST      | Users        | `personal_name={STRING}&email={string}...` | creates a new user in the users table                                                                                                |

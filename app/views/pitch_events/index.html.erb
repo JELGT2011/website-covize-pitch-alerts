@@ -3,16 +3,16 @@
   <div class="panel-heading">
     <h1>Listing Pitch Events</h1>
   </div>
-  <br>
+  <br/>
 
   <div class="container-fluid">
     <%= link_to new_pitch_event_path do %>
         <button class="btn btn-primary">New Pitch Event</button>
     <% end %>
   </div>
-  <br>
+  <br/>
 
-  <table class="table">
+  <table class="table responsive no-wrap" id="pitch_events_table">
     <thead>
     <tr>
       <th>Event name</th>
@@ -29,7 +29,7 @@
     <tbody>
     <% @pitch_events.each do |pitch_event| %>
         <tr>
-          <td><%= pitch_event.event_name %></td>
+          <td><%= link_to pitch_event.event_name, pitch_event %></td>
           <td><%= pitch_event.address_1 %></td>
           <td><%= pitch_event.address_2 %></td>
           <td><%= pitch_event.city %></td>
@@ -37,25 +37,6 @@
           <td><%= pitch_event.zip %></td>
           <td><%= pitch_event.event_start %></td>
           <td><%= pitch_event.event_end %></td>
-
-          <td>
-            <%= link_to pitch_event do %>
-                <span class="glyphicon glyphicon-eye-open"></span>
-            <% end %>
-          </td>
-
-          <td>
-            <%= link_to edit_pitch_event_path(pitch_event) do %>
-                <span class="glyphicon glyphicon-edit"></span>
-            <% end %>
-          </td>
-
-          <td>
-            <%= link_to pitch_event, method: :delete, data: { confirm: 'Are you sure?' } do %>
-                <span class="glyphicon glyphicon-remove"></span>
-            <% end %>
-          </td>
-
         </tr>
     <% end %>
     </tbody>

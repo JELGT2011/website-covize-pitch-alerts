@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_admin!, except: [:create]
 
   # GET /users
   # GET /users.json
@@ -69,6 +70,17 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params[:user]
-    end
+      params.permit(
+          :user,
+          :personal_name,
+          :email,
+          :company_name,
+          :industry,
+          :locale,
+          :female_founder,
+          :ethnic_founder,
+          :capital_goal,
+          :fundraising_stage
+      )
+   end
 end

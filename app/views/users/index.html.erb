@@ -1,25 +1,39 @@
-<p id="notice"><%= notice %></p>
+<div class="panel panel-primary">
 
-<h1>Listing Users</h1>
+  <div class="panel-heading">
+    <h1>Listing Users</h1>
+  </div>
+  <br/>
 
-<table>
-  <thead>
+  <div class="container-fluid">
+    <%= link_to new_user_path do %>
+      <button class="btn btn-primary">New User</button>
+    <% end %>
+  </div>
+  <br/>
+
+  <table class="table responsive no-wrap" id="users_table">
+    <thead>
     <tr>
-      <th colspan="3"></th>
+      <th>Company name</th>
+      <th>Industry</th>
+      <th>Locale</th>
+      <th>Capital goal</th>
+      <th>Fundraising stage</th>
     </tr>
-  </thead>
+    </thead>
 
-  <tbody>
+    <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to user.company_name, user %></td>
+        <td><%= user.industry %></td>
+        <td><%= user.locale %></td>
+        <td><%= user.capital_goal %></td>
+        <td><%= user.fundraising_stage %></td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
 
-<br>
-
-<%= link_to 'New User', new_user_path %>
+</div>
