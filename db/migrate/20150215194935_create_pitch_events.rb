@@ -15,6 +15,7 @@ class CreatePitchEvents < ActiveRecord::Migration
       t.string :city
       t.string :state
       t.string :zip
+      t.string :locale
       t.string :event_start
       t.string :event_end
       t.string :registration_deadline

@@ -52,6 +52,16 @@
   </div>
 
   <div class="field">
+    <%= f.label :locale %><br>
+    <%= select_tag :locale, options_for_select(
+                                  [
+                                          ['Atlanta (Georgia)', 'Atlanta (Georgia)'],
+                                          ['Washington D. C.', 'Washington D. C.']
+                                  ]
+                          ) %>
+  </div>
+
+  <div class="field">
     <%= f.label :event_start %><br>
     <%= f.text_field :event_start, :class => 'datetimepicker' %>
   </div>

@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20150417200128) do
     t.string   "city"
     t.string   "state"
     t.string   "zip"
+    t.string   "locale"
     t.string   "event_start"
     t.string   "event_end"
     t.string   "registration_deadline"

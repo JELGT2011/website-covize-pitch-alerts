@@ -23,7 +23,6 @@ class PitchEventsController < ApplicationController
     if params[:sort_order].present?
 
       case params[:sort_order]
-
       when 'event_name'
         @pitch_events = @pitch_events.sort_by { |pitch_event| pitch_event.event_name }
       when 'event_start'
@@ -41,8 +40,8 @@ class PitchEventsController < ApplicationController
     end
 =end
 
-    if params[:limit].present?
-      @pitch_events = @pitch_events[0, params[:limit].to_i]
+    if params[:starting_index].present? and params[:ending_index].present?
+      @pitch_events = @pitch_events[params[:starting_index].to_i, params[:ending_index].to_i]
     end
 
   end
@@ -118,6 +117,7 @@ class PitchEventsController < ApplicationController
         :city,
         :state,
         :zip,
+        :locale,
         :event_start,
         :event_end,
         :registration_deadline,
@@ -143,9 +143,9 @@ class PitchEventsController < ApplicationController
               :female_founder,
               :ethnic_founder,
               :industry,
+              :locale,
               :starting_index,
-              :ending_index,
-              :limit
+              :ending_index
     )
   end
 end

@@ -4,7 +4,6 @@ add time/date filtering and checking
 MAKE NOTE OF IE BUG FOR FILE UPLOAD
 
 filter out passed events
-before and after count in json
 total count in json
 locale filtering in json
 

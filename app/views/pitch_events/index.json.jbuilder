@@ -9,6 +9,7 @@ json.array!(@pitch_events) do |pitch_event|
                 :city,
                 :state,
                 :zip,
+                :locale,
                 :event_start,
                 :event_end,
                 :registration_deadline,
@@ -23,5 +24,5 @@ json.array!(@pitch_events) do |pitch_event|
                 :ethnic_founder,
                 :industry
 
- json.url pitch_event_url(pitch_event, format: :json)
+  json.url pitch_event_url(pitch_event, format: :json)
 end

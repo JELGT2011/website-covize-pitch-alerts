@@ -72,6 +72,8 @@ For now, everything is passed in as a url parameter.  Here is a listing:
 | GET       | Pitch Events | `national={BOOL}`                          | requires returned pitch events to be national                                                                                        |
 | GET       | Pitch Events | `female_founder={BOOL}`                    | requires returned pitch events to target startups with a female founder                                                              |
 | GET       | Pitch Events | `ethnic_founder={BOOL}`                    | requires returned pitch events to target startups with a founder of ethnic background                                                |
+| GET       | Pitch Events | `industry={STRING}`                        | requires returned pitch events to match the specified industry                                                                       |
+| GET       | Pitch Events | `locale={STRING}`                          | requires returned pitch events to match the specified locale                                                                         |
 | GET       | Pitch Events | `sort_order={ATTRIBUTE}`                   | sorts according to the following whitelisted attributes: "event_name", "event_start" (default), "event_end", "registration_deadline" |
-| GET       | Pitch Events | `limit={INT}`                              | limits the number of responses                                                                                                       |
+| GET       | Pitch Events | `starting_index={INT}&ending_index={INT}`  | gives the responses in range of { starting_index, starting_index+1, ... ending_index }                                               |
 | POST      | Users        | `personal_name={STRING}&email={string}...` | creates a new user in the users table                                                                                                |
