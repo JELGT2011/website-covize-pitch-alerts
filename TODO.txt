@@ -7,3 +7,9 @@ add time/date filtering and checking
 
 
 MAKE NOTE OF IE BUG FOR FILE UPLOAD
+
+images not showing up in json
+filter out passed events
+before and after count in json
+total count in json
+locale filtering in json
