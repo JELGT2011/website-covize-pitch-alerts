@@ -1,7 +1,7 @@
 
 
 jQuery ->
-  $('.datepicker').datepicker();
+  $('.datetimepicker').datetimepicker();
   $('#pitch_events_table').DataTable({
     responsive: true
   });
