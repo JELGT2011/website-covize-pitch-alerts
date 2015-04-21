@@ -1,14 +1,9 @@
 add form validators
 add time/date filtering and checking
 
-2 apps
-    free version has limited filtering and ads (4 listings per month)
-    paid version removes all filters (monthly subscription)
-
-
 MAKE NOTE OF IE BUG FOR FILE UPLOAD
 
-images not showing up in json
+change date picker to include time
 filter out passed events
 before and after count in json
 total count in json

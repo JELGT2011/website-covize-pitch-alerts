@@ -29,7 +29,8 @@
     <tbody>
     <% @pitch_events.each do |pitch_event| %>
         <tr>
-          <td><%= link_to pitch_event.event_name, pitch_event %></td>
+
+          <td><%= pitch_event.event_name%></td>
           <td><%= pitch_event.address_1 %></td>
           <td><%= pitch_event.address_2 %></td>
           <td><%= pitch_event.city %></td>
