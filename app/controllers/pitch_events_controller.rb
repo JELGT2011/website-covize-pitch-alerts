@@ -143,9 +143,7 @@ class PitchEventsController < ApplicationController
               :female_founder,
               :ethnic_founder,
               :industry,
-              :locale,
-              :starting_index,
-              :ending_index
+              :locale
     )
   end
 end
