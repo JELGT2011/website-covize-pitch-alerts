@@ -5,6 +5,5 @@ MAKE NOTE OF IE BUG FOR FILE UPLOAD
 
 filter out passed events
 total count in json
-locale filtering in json
 
 lock up admin sign ups
