@@ -198,11 +198,30 @@
 
   <div class="field">
     <%= f.label :industry %><br>
-    <%= f.text_field :industry %>
+    <%= select_tag :industry, options_for_select(
+                                  [
+                                          ["CleanTech and Energy"],
+                                          ["Education"],
+                                          ["Business Operations"],
+                                          ["Fashion and Design"],
+                                          ["Finance"],
+                                          ["Food and Beverage"],
+                                          ["Gaming"],
+                                          ["Healthcare, Medical Devices/BioTech"],
+                                          ["Media and Entertainment"],
+                                          ["Retail and Commerce"],
+                                          ["Social Enterprise"],
+                                          ["Green Technology"],
+                                          ["Social Media"],
+                                          ["Travel and Leisure"]
+                                  ]
+                          ) %>
   </div>
 
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+
 
